@@ -16,7 +16,7 @@ namespace Omicron_Pi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new createNewConfigButton());
+            Application.Run(new Form1());
         }
     }
 }

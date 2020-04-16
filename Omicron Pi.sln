@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omicron Pi", "Omicron Pi.csproj", "{8E40813A-50BB-4F6B-9D86-8651F98AD1AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yaml2CS", "..\Yaml2CS\Yaml2CS.csproj", "{6F2BFF66-B6DE-4B2C-B81D-69202986BA1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8E40813A-50BB-4F6B-9D86-8651F98AD1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E40813A-50BB-4F6B-9D86-8651F98AD1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E40813A-50BB-4F6B-9D86-8651F98AD1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2BFF66-B6DE-4B2C-B81D-69202986BA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2BFF66-B6DE-4B2C-B81D-69202986BA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2BFF66-B6DE-4B2C-B81D-69202986BA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2BFF66-B6DE-4B2C-B81D-69202986BA1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿namespace Omicron_Pi
 {
-    partial class createNewConfigButton
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,21 +45,19 @@
             this.managerAccessCheckBox = new System.Windows.Forms.CheckBox();
             this.staffAccessCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openExistingConfigButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.badgeColourComboBox = new System.Windows.Forms.ComboBox();
+            this.badgeHiddenCheckBox = new System.Windows.Forms.CheckBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
+            this.requiredKickPowerTextBox = new System.Windows.Forms.TextBox();
+            this.kickPowerTextBox = new System.Windows.Forms.TextBox();
+            this.badgeCoverCheckBox = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.badgeNameTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -111,14 +111,17 @@
             this.groupsAddButton = new System.Windows.Forms.Button();
             this.Groups = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.openExistingConfigButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -134,6 +137,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -154,6 +158,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General Settings";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Omicron_Pi.Properties.Resources.omicronpifull;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 775);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.PictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.PictureBox1_MouseLeave);
             // 
             // label7
             // 
@@ -306,53 +323,21 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Groups and Permissions";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.TabPage2_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.openExistingConfigButton);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(905, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(212, 92);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // openExistingConfigButton
-            // 
-            this.openExistingConfigButton.Location = new System.Drawing.Point(6, 22);
-            this.openExistingConfigButton.Name = "openExistingConfigButton";
-            this.openExistingConfigButton.Size = new System.Drawing.Size(176, 27);
-            this.openExistingConfigButton.TabIndex = 1;
-            this.openExistingConfigButton.Text = "Open Existing Config";
-            this.openExistingConfigButton.UseVisualStyleBackColor = true;
-            this.openExistingConfigButton.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 27);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Create New Config";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.checkBox25);
+            this.groupBox3.Controls.Add(this.badgeColourComboBox);
+            this.groupBox3.Controls.Add(this.badgeHiddenCheckBox);
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.label36);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.checkBox24);
+            this.groupBox3.Controls.Add(this.requiredKickPowerTextBox);
+            this.groupBox3.Controls.Add(this.kickPowerTextBox);
+            this.groupBox3.Controls.Add(this.badgeCoverCheckBox);
             this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.badgeNameTextBox);
             this.groupBox3.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(174, 7);
             this.groupBox3.Name = "groupBox3";
@@ -361,15 +346,48 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Group Settings";
             // 
-            // checkBox25
+            // badgeColourComboBox
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox25.Location = new System.Drawing.Point(749, 97);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(15, 14);
-            this.checkBox25.TabIndex = 12;
-            this.checkBox25.UseVisualStyleBackColor = true;
+            this.badgeColourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.badgeColourComboBox.FormattingEnabled = true;
+            this.badgeColourComboBox.Items.AddRange(new object[] {
+            "Pink",
+            "Red",
+            "White",
+            "Brown",
+            "Silver",
+            "Light Green",
+            "Crimson",
+            "Cyan",
+            "Aqua",
+            "Deep Pink",
+            "Tomato",
+            "Yellow",
+            "Magenta",
+            "Blue Green",
+            "Orange",
+            "Lime",
+            "Green",
+            "Emerald",
+            "Carmine",
+            "Nickel",
+            "Mint",
+            "Army Green",
+            "Pumpkin"});
+            this.badgeColourComboBox.Location = new System.Drawing.Point(148, 59);
+            this.badgeColourComboBox.Name = "badgeColourComboBox";
+            this.badgeColourComboBox.Size = new System.Drawing.Size(173, 23);
+            this.badgeColourComboBox.TabIndex = 13;
+            // 
+            // badgeHiddenCheckBox
+            // 
+            this.badgeHiddenCheckBox.AutoSize = true;
+            this.badgeHiddenCheckBox.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.badgeHiddenCheckBox.Location = new System.Drawing.Point(749, 97);
+            this.badgeHiddenCheckBox.Name = "badgeHiddenCheckBox";
+            this.badgeHiddenCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.badgeHiddenCheckBox.TabIndex = 12;
+            this.badgeHiddenCheckBox.UseVisualStyleBackColor = true;
             // 
             // label34
             // 
@@ -401,31 +419,31 @@
             this.label36.TabIndex = 9;
             this.label36.Text = "Group Kick Power";
             // 
-            // textBox2
+            // requiredKickPowerTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(591, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 22);
-            this.textBox2.TabIndex = 8;
+            this.requiredKickPowerTextBox.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requiredKickPowerTextBox.Location = new System.Drawing.Point(591, 59);
+            this.requiredKickPowerTextBox.Name = "requiredKickPowerTextBox";
+            this.requiredKickPowerTextBox.Size = new System.Drawing.Size(173, 22);
+            this.requiredKickPowerTextBox.TabIndex = 8;
             // 
-            // textBox4
+            // kickPowerTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(591, 25);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 22);
-            this.textBox4.TabIndex = 7;
+            this.kickPowerTextBox.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kickPowerTextBox.Location = new System.Drawing.Point(591, 25);
+            this.kickPowerTextBox.Name = "kickPowerTextBox";
+            this.kickPowerTextBox.Size = new System.Drawing.Size(173, 22);
+            this.kickPowerTextBox.TabIndex = 7;
             // 
-            // checkBox24
+            // badgeCoverCheckBox
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox24.Location = new System.Drawing.Point(306, 97);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(15, 14);
-            this.checkBox24.TabIndex = 6;
-            this.checkBox24.UseVisualStyleBackColor = true;
+            this.badgeCoverCheckBox.AutoSize = true;
+            this.badgeCoverCheckBox.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.badgeCoverCheckBox.Location = new System.Drawing.Point(306, 97);
+            this.badgeCoverCheckBox.Name = "badgeCoverCheckBox";
+            this.badgeCoverCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.badgeCoverCheckBox.TabIndex = 6;
+            this.badgeCoverCheckBox.UseVisualStyleBackColor = true;
             // 
             // label33
             // 
@@ -457,13 +475,13 @@
             this.label31.TabIndex = 3;
             this.label31.Text = "Group Badge";
             // 
-            // textBox1
+            // badgeNameTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(148, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 22);
-            this.textBox1.TabIndex = 0;
+            this.badgeNameTextBox.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.badgeNameTextBox.Location = new System.Drawing.Point(148, 25);
+            this.badgeNameTextBox.Name = "badgeNameTextBox";
+            this.badgeNameTextBox.Size = new System.Drawing.Size(173, 22);
+            this.badgeNameTextBox.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -534,7 +552,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(431, 572);
+            this.label30.Location = new System.Drawing.Point(431, 570);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(197, 30);
             this.label30.TabIndex = 51;
@@ -553,7 +571,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(431, 524);
+            this.label29.Location = new System.Drawing.Point(431, 522);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(212, 30);
             this.label29.TabIndex = 50;
@@ -572,7 +590,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(431, 464);
+            this.label28.Location = new System.Drawing.Point(431, 462);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(432, 45);
             this.label28.TabIndex = 49;
@@ -592,7 +610,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(431, 412);
+            this.label27.Location = new System.Drawing.Point(431, 410);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(192, 30);
             this.label27.TabIndex = 48;
@@ -611,7 +629,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(431, 359);
+            this.label26.Location = new System.Drawing.Point(431, 357);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(390, 30);
             this.label26.TabIndex = 47;
@@ -688,7 +706,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(431, 308);
+            this.label25.Location = new System.Drawing.Point(431, 306);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(311, 30);
             this.label25.TabIndex = 42;
@@ -707,7 +725,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(431, 245);
+            this.label24.Location = new System.Drawing.Point(431, 243);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(483, 45);
             this.label24.TabIndex = 41;
@@ -738,7 +756,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(431, 194);
+            this.label23.Location = new System.Drawing.Point(431, 192);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(381, 30);
             this.label23.TabIndex = 40;
@@ -759,7 +777,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(431, 133);
+            this.label22.Location = new System.Drawing.Point(431, 131);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(341, 45);
             this.label22.TabIndex = 39;
@@ -918,7 +936,6 @@
             this.label8.Size = new System.Drawing.Size(216, 30);
             this.label8.TabIndex = 25;
             this.label8.Text = "Kicking and short term banning\r\nAllows kicking and baning up to 1 hour.";
-            this.label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // label14
             // 
@@ -1044,43 +1061,42 @@
             this.tabPage3.Text = "Role Assignment";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.openExistingConfigButton);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(905, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(212, 92);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // openExistingConfigButton
+            // 
+            this.openExistingConfigButton.Location = new System.Drawing.Point(6, 22);
+            this.openExistingConfigButton.Name = "openExistingConfigButton";
+            this.openExistingConfigButton.Size = new System.Drawing.Size(176, 27);
+            this.openExistingConfigButton.TabIndex = 1;
+            this.openExistingConfigButton.Text = "Open Existing Config";
+            this.openExistingConfigButton.UseVisualStyleBackColor = true;
+            this.openExistingConfigButton.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 27);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Create New Config";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "config_remoteadmin.txt";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Pink",
-            "Red",
-            "White",
-            "Brown",
-            "Silver",
-            "Light Green",
-            "Crimson",
-            "Cyan",
-            "Aqua",
-            "Deep Pink",
-            "Tomato",
-            "Yellow",
-            "Magenta",
-            "Blue Green",
-            "Orange",
-            "Lime",
-            "Green",
-            "Emerald",
-            "Carmine",
-            "Nickel",
-            "Mint",
-            "Army Green",
-            "Pumpkin"});
-            this.comboBox1.Location = new System.Drawing.Point(148, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 23);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // createNewConfigButton
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1088,18 +1104,21 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "createNewConfigButton";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
             this.Text = "Omicron Pi";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1179,18 +1198,19 @@
         private System.Windows.Forms.CheckBox checkBox21;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckBox checkBox25;
+        private System.Windows.Forms.CheckBox badgeHiddenCheckBox;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox24;
+        private System.Windows.Forms.TextBox requiredKickPowerTextBox;
+        private System.Windows.Forms.TextBox kickPowerTextBox;
+        private System.Windows.Forms.CheckBox badgeCoverCheckBox;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox badgeNameTextBox;
+        private System.Windows.Forms.ComboBox badgeColourComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
